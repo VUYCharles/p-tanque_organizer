@@ -1,0 +1,263 @@
+/* ===============================================
+       Configuration globale
+=================================================*/
+/* Corps de la page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbfd; /* Fond légèrement gris */
+    color: #333; /* Texte par défaut */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Maintient la hauteur pleine pour afficher le footer correctement */
+}
+
+/* Suppression des marges sur tout le document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Conteneur principal */
+.container {
+    flex: 1; /* S'étire pour occuper tout l'espace disponible, sauf le footer */
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* ===============================================
+       Titres principaux
+=================================================*/
+/* Style des titres */
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #007BFF; /* Bleu moderne */
+    margin-bottom: 20px;
+    text-align: center;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    color: #007BFF;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ===============================================
+       Formulaire
+=================================================*/
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ===============================================
+       Boutons
+=================================================*/
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #28a745;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+}
+
+/* ===============================================
+       Sections de résultats et cartes
+=================================================*/
+/* Zone des résultats */
+.results {
+    margin-top: 20px;
+}
+
+/* Cartes pour organiser les sessions */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Liste des matchs dans une session */
+.matches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Cartes individuels pour chaque match */
+.match-card {
+    flex: 1 1 calc(45% - 15px); /* Les cartes occupent 45% du container (responsive) */
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Affichage des équipes */
+.teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    margin: 5px;
+}
+
+.team h5 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.team ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.vs {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #007BFF;
+    text-align: center;
+}
+
+/* ===============================================
+       Scroll et Responsiveness
+=================================================*/
+.scrollable {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+
+/* ===============================================
+       Footer
+=================================================*/
+.footer {
+    width: 100%;
+    background-color: #f1f3f5;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #007BFF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

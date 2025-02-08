@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournoi de Pétanque</title>
+    <!-- Police moderne -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 Organisateur de Tournoi de Pétanque 🏆</h1>
+        <form id="tournamentForm" class="form">
+            <label for="players">Combien de joueurs ?</label>
+            <input type="number" id="players" name="players" min="36" placeholder="Ex : 36">
+            <button type="submit" class="btn-primary">Générer le tournoi</button>
+        </form>
+        <div id="message" class="message"></div>
+        <div id="results" class="results scrollable"></div>
+        <button id="exportExcel" class="btn-secondary" style="display: none;">Télécharger le fichier Excel</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx"></script>
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <p>
+            Créé avec ❤️ par <strong>VUYCharles</strong>.  
+            Plus de projets <a href="https://github.com/VUYCharles" target="_blank">GitHub</a>.
+        </p>
+    </footer>
+    
+</body>
+</html>
